@@ -12,14 +12,15 @@ class Settings:
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
 
     # Database
-    # DB_HOST: str = os.getenv("DB_HOST", "localhost")  # Commented out for live database
+    # Local database fallback is commented out; use the live DATABASE_URL connection.
+    # DB_HOST: str = os.getenv("DB_HOST", "localhost")
     # DB_PORT: int = int(os.getenv("DB_PORT", "3306"))
     # DB_USER: str = os.getenv("DB_USER", "root")
     # DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
     # DB_NAME: str = os.getenv("DB_NAME", "committee")
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        "mysql+pymysql://root:nmxqodIjrPyTGajKWFzPNRIEnAvLtwHP@shortline.proxy.rlwy.net:17199/railway",
+        "mysql+pymysql://root:nmxqodIjrPyTGajKWFzPNRIEnAvLtwHP@shortline.proxy.rlwy.net:17199/committee",
     )
 
     # JWT
