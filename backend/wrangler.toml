@@ -1,0 +1,8 @@
+name = "committee-api"
+main = "worker.py"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["python_workers"]
+
+[vars]
+DEBUG = "False"
+DATABASE_URL = "mysql+pymysql://root:nmxqodIjrPyTGajKWFzPNRIEnAvLtwHP@shortline.proxy.rlwy.net:17199/committee"
