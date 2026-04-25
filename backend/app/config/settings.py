@@ -12,14 +12,14 @@ class Settings:
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
 
     # Database
-    DB_HOST: str = os.getenv("DB_HOST", "localhost")
-    DB_PORT: int = int(os.getenv("DB_PORT", "3306"))
-    DB_USER: str = os.getenv("DB_USER", "root")
-    DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
-    DB_NAME: str = os.getenv("DB_NAME", "committee")
+    # DB_HOST: str = os.getenv("DB_HOST", "localhost")  # Commented out for live database
+    # DB_PORT: int = int(os.getenv("DB_PORT", "3306"))
+    # DB_USER: str = os.getenv("DB_USER", "root")
+    # DB_PASSWORD: str = os.getenv("DB_PASSWORD", "")
+    # DB_NAME: str = os.getenv("DB_NAME", "committee")
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        f"mysql+pymysql://{quote_plus(DB_USER)}:{quote_plus(DB_PASSWORD)}@{DB_HOST}:{DB_PORT}/{DB_NAME}",
+        "mysql+pymysql://root:nmxqodIjrPyTGajKWFzPNRIEnAvLtwHP@shortline.proxy.rlwy.net:17199/railway",
     )
 
     # JWT
